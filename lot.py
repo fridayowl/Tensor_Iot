@@ -11,13 +11,13 @@ class ParkingLot :
        print(self.parking_capacity)
        print(self.parking_array)
     
-    def car_park(self,car , spot):
-        self.parking_array[1] = "0"
-        if self.parking_array[spot] is not None: 
+    def car_park(self,car , spot): 
+        if self.parking_array[spot] is  None: 
             self.parking_array[spot]=car
-            print("somebody parked here")
+            print(self.parking_array[spot]) 
+            return f" A car with {car.license_number}parkined in this {spot} Successfully"
         else :
-            print("vehichle parked successfully")
+            return f" A car with License number{ self.parking_array[spot] } already parked in this Spot # {spot}"
         
 
 
@@ -30,15 +30,14 @@ class Car :
     def __str__(self):
         return self.license_number
 
-def _generate_license_number():
-    random_license_number = random.randrange( 0000000, 9999999, max_license_length)
-    # print(Car(str(random_license_number)))
-    return random_license_number
    
 def main(cars , parking_lot):
-    carlicense_plate = cars.pop(0)
-    spot = spot = random.randint(0, parking_lot.parking_capacity- 1)
-    parking_lot.car_park(carlicense_plate,spot)
+    while cars and None in parking_lot.parking_array:
+        carlicense_plate = cars.pop(0)
+        spot = random.randint(0, parking_lot.parking_capacity- 1)
+        while parking_lot.parking_array[spot] is not None :
+            spot = spot = random.randint(0, parking_lot.parking_capacity - 1)     
+        print(parking_lot.car_park(carlicense_plate,spot))
     
     
 
