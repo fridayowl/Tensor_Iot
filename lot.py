@@ -1,4 +1,4 @@
-
+import random
 
 class ParkingLot :
     # initalizes the parkinglot class 
@@ -7,7 +7,7 @@ class ParkingLot :
        self.parking_area = parking_area
        self.parking_lot = parking_lot
        self.parking_capacity=parking_area // parking_lot
-       self.parking_array=[0] * self.parking_capacity
+       self.parking_array=[None] * self.parking_capacity
        print(self.parking_capacity)
        print(self.parking_array)
 
@@ -25,28 +25,16 @@ def _generate_license_number():
     # print(Car(str(random_license_number)))
     return random_license_number
    
-ParkingLot(2000)   
-import random 
-
-
-max_license_length = 7  #max length of license.
-
-userinput = input("type enter")   #userinput when car enters.
-
-license_dictonary =[] #to map all the license numbers.
-
-checkduplication=True
-
-#check and creates new license for each car .
-if userinput == "": 
-    while  checkduplication :
-        temp = _generate_license_number() 
-        if temp not in license_dictonary :
-            license_dictonary.append(temp)
-            cars = Car(str(temp))
-            cont= False
-
-print(license_dictonary)
-
-     
+def main(cars , parking_lot):
+    print(cars.pop(0))
     
+    
+
+parking_lot = ParkingLot(2000)   
+max_license_length = 7  #max length of license.
+random_license_number = random.randrange(0000000, 9999999-parking_lot.parking_capacity, max_license_length)
+userinput = input("type enter")   #userinput when car enters. 
+if userinput == "":  
+    cars = [Car(str(i)) for i in range(
+        random_license_number,random_license_number + parking_lot.parking_capacity + 1)]
+    main(cars,parking_lot)

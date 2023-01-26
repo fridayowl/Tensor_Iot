@@ -59,20 +59,23 @@ Creating a Car Class :
                 
                 def __str__(self):
                     return self.license_number
-            
-            create a 7 digit random number .
-                import random  
+
+
+            create a 7 digit random number . 
                 max_length =7 
-                random_license_number = random.randrange(0000000,9999999,max_length)
-            
-            Make sure license is not duplicated .
-                license_dic=[]
-                license_dic.append("all the license generated")
-                if found match generate new license .
-                else 
-                create a license by transfering the license number to car class .
-        
+                for i in range(0000000, 1564675 + parking_lot.capacity + 1)
+    Create a parkingspot 
+            spot = random (0,totalcapacity - 1)
+            No need to create the spot if the spot is already full 
+            if parking spot is full exit the program 
+    
+    Create a parking method :
+
+            Takes , Parking lot , parking spot 
 
 
 
-        
+    Create a main method :
+
+            main method takes an array of cars and the parking lot
+            get first car licence number 
