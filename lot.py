@@ -20,23 +20,33 @@ class Car :
     def __str__(self):
         return self.license_number
 
-def _generateLicense():
+def _generate_license_number():
     random_license_number = random.randrange( 0000000, 9999999, max_license_length)
-    print(Car(str(random_license_number)))
-    return Car(str(random_license_number))
+    # print(Car(str(random_license_number)))
+    return random_license_number
    
 ParkingLot(2000)   
 import random 
-max_license_length = 7
-userinput = input("type enter") 
-license_dictonary =[]
 
+
+max_license_length = 7  #max length of license.
+
+userinput = input("type enter")   #userinput when car enters.
+
+license_dictonary =[] #to map all the license numbers.
+
+checkduplication=True
+
+#check and creates new license for each car .
 if userinput == "": 
-    temp_licensenumber = _generateLicense()
-    license_dictonary.append(temp_licensenumber)
-print(license_dictonary) 
+    while  checkduplication :
+        temp = _generate_license_number() 
+        if temp not in license_dictonary :
+            license_dictonary.append(temp)
+            cars = Car(str(temp))
+            cont= False
 
-
+print(license_dictonary)
 
      
     
