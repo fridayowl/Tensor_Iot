@@ -48,4 +48,27 @@ Creating a Parking lot :
             Parking array = [0] * 20 
             result = [0,0,0,0,0..............] // create 20 empty array.
 
+Creating a Car Class :
+
+            Given :
+            Car should return a 7 digit license number using magic method or dunder method 
+
+            Class Car :
+                def __init__(self,license_number) :
+                    self.license_number = license_number
+                
+                def __str__(self):
+                    return self.license_number
+            
+            create a 7 digit random number .
+                import random  
+                max_length =7 
+                random_license_number = random.randrange(0000000,9999999,max_length)
+            
+            Make sure license is not duplicated .
+                license_dic=[]
+                license_dic.append("all the license generated")
+                if found match generate new license .
+
+
         
