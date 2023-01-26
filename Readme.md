@@ -2,5 +2,4 @@
 
 ## Step 1: 
 
-Creating a Parking lot :
-    
+Creating a Parking lot : 
