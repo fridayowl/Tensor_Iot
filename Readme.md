@@ -83,3 +83,11 @@ Creating a Car Class :
             main method takes an array of cars and the parking lot
             get first car licence number and create a spot 
             transfer the spot the parking function until the car array become none .
+
+    
+## IDE USED :
+
+VSCODE  :1.74 
+Tested on :
+Python version : 3
+
