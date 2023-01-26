@@ -3,13 +3,23 @@ import random
 class ParkingLot :
     # initalizes the parkinglot class 
     
-   def  __init__(self,parking_area ,parking_lot=96):
+    def  __init__(self,parking_area ,parking_lot=96):
        self.parking_area = parking_area
        self.parking_lot = parking_lot
        self.parking_capacity=parking_area // parking_lot
        self.parking_array=[None] * self.parking_capacity
        print(self.parking_capacity)
        print(self.parking_array)
+    
+    def car_park(self,car , spot):
+        self.parking_array[1] = "0"
+        if self.parking_array[spot] is not None: 
+            self.parking_array[spot]=car
+            print("somebody parked here")
+        else :
+            print("vehichle parked successfully")
+        
+
 
 #Car class the defines the property of the car 
 
@@ -26,7 +36,9 @@ def _generate_license_number():
     return random_license_number
    
 def main(cars , parking_lot):
-    print(cars.pop(0))
+    carlicense_plate = cars.pop(0)
+    spot = spot = random.randint(0, parking_lot.parking_capacity- 1)
+    parking_lot.car_park(carlicense_plate,spot)
     
     
 

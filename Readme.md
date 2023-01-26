@@ -72,10 +72,14 @@ Creating a Car Class :
     Create a parking method :
 
             Takes , Parking lot , parking spot 
+            check if the parking spot is empty or nor 
+            if not assing the spot 
+            else not assign the car to the spot
 
 
 
     Create a main method :
 
             main method takes an array of cars and the parking lot
-            get first car licence number 
+            get first car licence number and create a spot 
+            
