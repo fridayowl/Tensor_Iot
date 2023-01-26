@@ -47,4 +47,5 @@ Creating a Parking lot :
             <span style="color: red"> Remove the decimal part  </span>
             Parking array = [0] * 20 
             result = [0,0,0,0,0..............] // create 20 empty array.
-            
+
+        
