@@ -39,7 +39,7 @@ __init__="__main__"
 parking_lot = ParkingLot(2000)   
 max_license_length = 7  #max length of license.
 random_license_number = random.randrange(0000000, 9999999-parking_lot.parking_capacity, max_license_length)
-userinput = input("type enter")    
+userinput = input("press enter")    
 if userinput == "":  
     cars = [Car(str(i)) for i in range(
         random_license_number,random_license_number + parking_lot.parking_capacity + 1)]
