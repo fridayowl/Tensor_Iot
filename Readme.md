@@ -69,6 +69,10 @@ Creating a Car Class :
                 license_dic=[]
                 license_dic.append("all the license generated")
                 if found match generate new license .
+                else 
+                create a license by transfering the license number to car class .
+        
+
 
 
         
