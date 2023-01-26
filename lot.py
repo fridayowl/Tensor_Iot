@@ -7,15 +7,12 @@ class ParkingLot :
        self.parking_area = parking_area
        self.parking_lot = parking_lot
        self.parking_capacity=parking_area // parking_lot
-       self.parking_array=[None] * self.parking_capacity
-       print(self.parking_capacity)
-       print(self.parking_array)
+       self.parking_array=[None] * self.parking_capacity 
        
        
     def car_park(self,car , spot): 
         if self.parking_array[spot] is  None: 
             self.parking_array[spot]=car
-            print(self.parking_array[spot]) 
             return f" A car with License Number #  {car.license_number} parked in this Spot # {spot} Successfully"
         else :
             return f" A car with License Number #  { self.parking_array[spot] } already parked in this Spot # {spot}"
